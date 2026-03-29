@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruchira Suresh | Market Research & AI Automation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #faf9f8;
+    --bg2: #f2eeec;
+    --text: #1a1815;
+    --text-muted: #6b6560;
+    --accent: #9e6b7a;
+    --accent-light: #f5eaed;
+    --border: #e0d8d5;
+    --white: #ffffff;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 3rem;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 3rem 6rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .hero-inner {
+    max-width: 700px;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 0.35rem 0.85rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.25rem;
+    font-family: var(--sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+  }
+
+  .btn-primary:hover { background: #234a3e; }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  .btn-outline:hover { border-color: var(--text); }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+    color: var(--text);
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+  }
+
+  .about-text p strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .stat-item {
+    padding: 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+  }
+
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--accent);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+
+  /* EXPERIENCE */
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .exp-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .exp-item:first-child { border-top: 1px solid var(--border); }
+
+  .exp-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+    padding-top: 0.2rem;
+  }
+
+  .exp-role {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .exp-company {
+    font-size: 0.875rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .exp-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    padding: 1.75rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+  }
+
+  .skill-card-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--accent-light);
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .skill-card h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.65rem;
+    background: var(--bg2);
+    color: var(--text-muted);
+    border-radius: 2rem;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 2rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    transition: border-color 0.2s;
+  }
+
+  .project-card:hover { border-color: var(--accent); }
+
+  .project-status {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .status-building {
+    background: #fff3cd;
+    color: #7a5c00;
+  }
+
+  .status-live {
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-card p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .stack-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.55rem;
+    background: var(--bg2);
+    color: var(--text-muted);
+    border-radius: 2rem;
+    font-weight: 400;
+  }
+
+  /* CONTACT */
+  .contact-inner {
+    max-width: 560px;
+  }
+
+  .contact-inner p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+  }
+
+  .contact-link:hover { border-color: var(--accent); }
+
+  .contact-link-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--accent-light);
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+
+  .contact-link span { color: var(--text-muted); font-size: 0.8rem; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* CHATBOT */
+  .chat-trigger {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 52px;
+    height: 52px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 200;
+    border: none;
+    box-shadow: 0 4px 20px rgba(45,90,78,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .chat-trigger:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 24px rgba(45,90,78,0.4);
+  }
+
+  .chat-trigger svg { width: 22px; height: 22px; fill: white; }
+
+  .chat-window {
+    position: fixed;
+    bottom: 5.5rem;
+    right: 2rem;
+    width: 360px;
+    max-height: 480px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .chat-window.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  .chat-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .chat-avatar {
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .chat-header-info { flex: 1; }
+  .chat-header-info strong { font-size: 0.875rem; display: block; }
+  .chat-header-info span { font-size: 0.75rem; color: var(--text-muted); }
+
+  .chat-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 0.25rem;
+  }
+
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .msg {
+    max-width: 85%;
+    padding: 0.65rem 0.9rem;
+    border-radius: 0.75rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .msg-bot {
+    background: var(--bg2);
+    color: var(--text);
+    align-self: flex-start;
+    border-bottom-left-radius: 0.2rem;
+  }
+
+  .msg-user {
+    background: var(--accent);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0.2rem;
+  }
+
+  .msg-typing {
+    background: var(--bg2);
+    align-self: flex-start;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border-bottom-left-radius: 0.2rem;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--text-muted);
+    border-radius: 50%;
+    animation: bounce 1.2s infinite;
+  }
+
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes bounce {
+    0%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-5px); }
+  }
+
+  .chat-input-area {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .chat-input {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    padding: 0.55rem 1rem;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    outline: none;
+    background: var(--bg);
+    color: var(--text);
+    transition: border-color 0.2s;
+  }
+
+  .chat-input:focus { border-color: var(--accent); }
+
+  .chat-send {
+    width: 34px;
+    height: 34px;
+    background: var(--accent);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+
+  .chat-send:hover { background: #234a3e; }
+  .chat-send svg { width: 14px; height: 14px; fill: white; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .chat-window { width: calc(100vw - 2rem); right: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Ruchira Suresh</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Consumer Research × AI Automation</span>
+    <h1>I work in consumer research and I'm building the <em>tools I wish existed.</em></h1>
+    <p class="hero-desc">
+      Researcher and automation builder at the intersection of consumer insight and AI. 
+      By day I uncover what drives shopper behaviour. Outside of that I'm automating the parts that shouldn't be manual.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">See what I'm building</a>
+      <a href="Ruchira_Suresh_CV.pdf" download class="btn btn-outline">Download CV</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">About</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm <strong>Dr. Ruchira Suresh</strong>, a Senior Research Consultant at <strong>eye square</strong> in Berlin, with a doctorate in psychology and over three years of industry experience in market research.</p>
+      <p>My work centres on <strong>understanding what drives consumer attention, choice, and behaviour</strong>, integrating implicit and explicit methods like eye tracking and surveys to deliver insights that are commercially actionable, not just academically interesting.</p>
+      <p>I specialise in advanced quantitative research, benchmarking, and meta-analytical work, synthesising insights across studies to establish category norms and sharpen recommendations for leading FMCG brands.</p>
+      <p>Alongside the research, I'm building <strong>automated workflows in n8n</strong> to modernise how analysis gets done. Less time on process, more time on insight.</p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-item" style="border-left: 3px solid var(--accent); border-radius: 0 0.5rem 0.5rem 0;">
+        <span class="stat-num" style="font-size: 1.1rem; font-family: var(--sans); font-weight: 500;">Based in Berlin</span>
+        <span class="stat-label">Working at eye square, a behavioural research company specialising in shopper and ecommerce studies.</span>
+      </div>
+      <div class="stat-item" style="border-left: 3px solid var(--accent); border-radius: 0 0.5rem 0.5rem 0;">
+        <span class="stat-num" style="font-size: 1.1rem; font-family: var(--sans); font-weight: 500;">Doctorate in Psychology</span>
+        <span class="stat-label">Researched how people perceive and process numerical information in financial decision making contexts.</span>
+      </div>
+      <div class="stat-item" style="border-left: 3px solid var(--accent); border-radius: 0 0.5rem 0.5rem 0;">
+        <span class="stat-num" style="font-size: 1.1rem; font-family: var(--sans); font-weight: 500;">Building with n8n</span>
+        <span class="stat-label">Automating research workflows so more time goes to insight and less to manual process.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PERSONAL NOTE -->
+<section id="note">
+  <p class="section-label">A bit more about me</p>
+  <div style="max-width: 620px;">
+    <p style="font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.6rem); line-height: 1.5; color: var(--text); letter-spacing: -0.01em; margin-bottom: 1.5rem;">
+      Researchers are used to doing a lot by hand. That's just how it's always been done.
+    </p>
+    <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.25rem;">
+      When AI started becoming a real option, my first instinct was resistance. It felt like losing control of something I'd spent years getting good at. The rigour, the process, the craft of research. I wasn't ready to hand that over.
+    </p>
+    <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.25rem;">
+      But then something shifted. I started seeing AI not as a replacement for the thinking, but as a way to get rid of everything around it: the repetitive parts, the manual parts, the parts that slow you down before you even get to the interesting questions.
+    </p>
+    <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8;">
+      That's what I'm figuring out, one workflow at a time. How to bring a researcher's mindset to automation, and an automation mindset to research.
+    </p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">Experience</p>
+  <h2 class="section-title">Where I work</h2>
+  <div class="experience-list">
+    <div class="exp-item">
+      <div class="exp-date">Dec 2025 to Present</div>
+      <div>
+        <div class="exp-role">Senior Research Consultant</div>
+        <div class="exp-company">eye square, Berlin</div>
+        <div class="exp-desc">Leading end-to-end consumer research projects delivering behavioural insights for leading brands. Acting as subject-matter expert in benchmarking and meta-analytical research, synthesising insights across studies to establish category norms. Designing and overseeing advanced quantitative research integrating eye tracking and surveys. Building automated n8n workflows to modernise processes and accelerate analysis.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">Oct 2023 to Dec 2025</div>
+      <div>
+        <div class="exp-role">Research Consultant</div>
+        <div class="exp-company">eye square, Berlin</div>
+        <div class="exp-desc">Managed workstreams in quantitative research projects for FMCG clients, including survey design, data collection, and validation. Conducted in-depth analysis of behavioural data, identifying trends and generating actionable insights. Produced client-facing reports and presentations ensuring clarity and business relevance.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">Jan 2023 to Sep 2023</div>
+      <div>
+        <div class="exp-role">Associate Consultant</div>
+        <div class="exp-company">eye square, Berlin</div>
+        <div class="exp-desc">Supported quantitative research projects for FMCG brands including survey setup, data preparation, and fieldwork coordination. Conducted data cleaning, coding, and analysis for behavioural studies. Contributed to client reports, charts, and baseline insight summaries.</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">Oct 2015 to Mar 2021</div>
+      <div>
+        <div class="exp-role">Doctoral Researcher</div>
+        <div class="exp-company">University of Konstanz, Germany</div>
+        <div class="exp-desc">Investigated how people perceive sequential percentage changes and its impact on financial decision making, using experimental designs, online surveys, and quantitative analysis in R (t-tests, ANOVA, linear regression).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">Skills & Tools</p>
+  <h2 class="section-title">What I work with</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-icon">🔬</div>
+      <h3>Research Methods</h3>
+      <div class="skill-tags">
+        <span class="tag">Eye tracking</span>
+        <span class="tag">Implicit measurement</span>
+        <span class="tag">Survey design</span>
+        <span class="tag">Usability testing</span>
+        <span class="tag">SPSS</span>
+        <span class="tag">Experimental design</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">⚡</div>
+      <h3>Automation & AI</h3>
+      <div class="skill-tags">
+        <span class="tag">n8n</span>
+        <span class="tag">Claude API</span>
+        <span class="tag">OpenAI API</span>
+        <span class="tag">Airtable</span>
+        <span class="tag">Google Drive</span>
+        <span class="tag">Webhook workflows</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">🛒</div>
+      <h3>Shopper & Retail Research</h3>
+      <div class="skill-tags">
+        <span class="tag">Walmart</span>
+        <span class="tag">Amazon</span>
+        <span class="tag">Tesco</span>
+        <span class="tag">Simulated retail</span>
+        <span class="tag">PDP testing</span>
+        <span class="tag">Carousel studies</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">📊</div>
+      <h3>Analysis & Reporting</h3>
+      <div class="skill-tags">
+        <span class="tag">Tivian</span>
+        <span class="tag">Python</span>
+        <span class="tag">Excel</span>
+        <span class="tag">PowerPoint</span>
+        <span class="tag">Automated pipelines</span>
+        <span class="tag">Word automation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="section-label">Projects</p>
+  <h2 class="section-title">What I'm building</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <span class="project-status status-building">Building</span>
+      <h3>Survey Analysis Pipeline</h3>
+      <p>Replacing manual SPSS work with an automated Tivian survey analysis pipeline.</p>
+      <div class="project-stack">
+        <span class="stack-tag">n8n</span>
+        <span class="stack-tag">Tivian</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- EDUCATION -->
+<section id="education">
+  <p class="section-label">Education</p>
+  <h2 class="section-title">Academic background</h2>
+  <div class="experience-list">
+    <div class="exp-item">
+      <div class="exp-date">2015 to 2021</div>
+      <div>
+        <div class="exp-role">Dr. rer. nat., Psychology & Behavioural Decision Making</div>
+        <div class="exp-company">University of Konstanz, Germany · Magna cum laude</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2013 to 2014</div>
+      <div>
+        <div class="exp-role">M.Sc, Neuropsychology</div>
+        <div class="exp-company">Maastricht University · Merit</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2012 to 2013</div>
+      <div>
+        <div class="exp-role">Postgraduate Diploma, Counselling Psychology</div>
+        <div class="exp-company">MLCU, Bengaluru · First Class</div>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-date">2009 to 2012</div>
+      <div>
+        <div class="exp-role">B.A. (Hons), Psychology</div>
+        <div class="exp-company">Christ University, Bangalore · First Class</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <p class="section-label">Certifications</p>
+  <h2 class="section-title">Licences & learning</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-icon">🤖</div>
+      <h3>AI & Generative AI</h3>
+      <div class="skill-tags">
+        <span class="tag">Generative AI for Project Managers · SkillUp (2025)</span>
+        <span class="tag">Generative AI: Prompt Engineering Basics · IBM (2025)</span>
+        <span class="tag">Generative AI: Introduction & Applications · IBM (2025)</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">📋</div>
+      <h3>Research & Project Management</h3>
+      <div class="skill-tags">
+        <span class="tag">Market Research Foundations · LinkedIn (2022)</span>
+        <span class="tag">Foundations of Project Management · Google (2022)</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">📈</div>
+      <h3>Data & Digital</h3>
+      <div class="skill-tags">
+        <span class="tag">Introduction to SQL · DataCamp (2022)</span>
+        <span class="tag">Tableau Training for Data Science · Udemy (2022)</span>
+        <span class="tag">Fundamentals of Digital Marketing · Google (2022)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Contact</p>
+  <h2 class="section-title">Get in touch</h2>
+  <div class="contact-inner">
+    <p>I like talking to people who are curious about the same things. If you work in research, are thinking about automation, or just want to swap notes on what you're building, feel free to reach out.</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/dr-ruchira-suresh-32922115/" target="_blank" class="contact-link">
+        <div class="contact-link-icon">in</div>
+        <div>
+          <strong>LinkedIn</strong>
+          <span>Dr. Ruchira Suresh</span>
+        </div>
+      </a>
+      <a href="/cdn-cgi/l/email-protection#7c0e091f14150e1d520f090e190f143c1b111d1510521f1311" class="contact-link">
+        <div class="contact-link-icon">@</div>
+        <div>
+          <strong>Email</strong>
+          <span><span class="__cf_email__" data-cfemail="c0b2b5a3a8a9b2a1eeb3b5b2a5b3a880a7ada1a9aceea3afad">[email&#160;protected]</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ruchira Suresh · Berlin</p>
+</footer>
+
+<!-- CHATBOT -->
+<button class="chat-trigger" id="chatTrigger" aria-label="Open chat">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+</button>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="chat-avatar">RS</div>
+    <div class="chat-header-info">
+      <strong>Ask about Ruchira</strong>
+      <span>Powered by Claude AI</span>
+    </div>
+    <button class="chat-close" id="chatClose">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg msg-bot">Hi! I'm here to answer questions about Ruchira. Ask me about her background, work, projects, or anything else you'd like to know.</div>
+  </div>
+  <div class="chat-input-area">
+    <input class="chat-input" id="chatInput" type="text" placeholder="Ask me anything…" />
+    <button class="chat-send" id="chatSend">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const WEBHOOK_URL = 'YOUR_N8N_WEBHOOK_URL_HERE';
+
+  const trigger = document.getElementById('chatTrigger');
+  const chatWindow = document.getElementById('chatWindow');
+  const closeBtn = document.getElementById('chatClose');
+  const input = document.getElementById('chatInput');
+  const sendBtn = document.getElementById('chatSend');
+  const messages = document.getElementById('chatMessages');
+
+  trigger.addEventListener('click', () => chatWindow.classList.toggle('open'));
+  closeBtn.addEventListener('click', () => chatWindow.classList.remove('open'));
+
+  function addMsg(text, type) {
+    const div = document.createElement('div');
+    div.className = 'msg msg-' + type;
+    div.textContent = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+    return div;
+  }
+
+  function showTyping() {
+    const div = document.createElement('div');
+    div.className = 'msg-typing';
+    div.id = 'typing';
+    div.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function removeTyping() {
+    const t = document.getElementById('typing');
+    if (t) t.remove();
+  }
+
+  async function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
+    input.value = '';
+    addMsg(text, 'user');
+    showTyping();
+
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text })
+      });
+      const data = await res.json();
+      removeTyping();
+      addMsg(data.reply || data.message || data.output || 'Thanks for your message!', 'bot');
+    } catch (e) {
+      remove
