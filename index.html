@@ -473,21 +473,22 @@
 
   /* CHATBOT */
   .chat-trigger {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 52px;
-    height: 52px;
-    background: var(--accent);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 200;
-    border: none;
-    box-shadow: 0 4px 20px rgba(45,90,78,0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
+    all: revert !important;
+    position: fixed !important;
+    bottom: 2rem !important;
+    right: 2rem !important;
+    width: 52px !important;
+    height: 52px !important;
+    background: #9e6b7a !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 200 !important;
+    border: none !important;
+    box-shadow: 0 4px 20px rgba(158,107,122,0.3) !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
   }
 
   .chat-trigger:hover {
@@ -1078,9 +1079,9 @@
 </footer>
 
 <!-- CHATBOT -->
-<button class="chat-trigger" id="chatTrigger" aria-label="Open chat">
+<div class="chat-trigger" id="chatTrigger" role="button" aria-label="Open chat">
   <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
-</button>
+</div>
 
 <div class="chat-window" id="chatWindow">
   <div class="chat-header">
@@ -1089,16 +1090,16 @@
       <strong>Ask about Ruchira</strong>
       <span>Powered by Claude AI</span>
     </div>
-    <button class="chat-close" id="chatClose">✕</button>
+    <div class="chat-close" id="chatClose">✕</div>
   </div>
   <div class="chat-messages" id="chatMessages">
     <div class="msg msg-bot">Hi! I'm here to answer questions about Ruchira. Ask me about her background, work, projects, or anything else you'd like to know.</div>
   </div>
   <div class="chat-input-area">
     <input class="chat-input" id="chatInput" type="text" placeholder="Ask me anything…" />
-    <button class="chat-send" id="chatSend">
+    <div class="chat-send" id="chatSend">
       <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-    </button>
+    </div>
   </div>
 </div>
 
