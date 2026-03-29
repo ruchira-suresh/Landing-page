@@ -1,4 +1,5 @@
 var WEBHOOK_URL = 'https://n8n.promitray.com/webhook/c5c5c573-a393-4d7b-9b14-a15d2ba212d3';
+var conversationHistory = [];
 
 function addMsg(text, type) {
   var messages = document.getElementById('chatMessages');
@@ -29,18 +30,22 @@ function sendMessage() {
   var text = input.value.trim();
   if (!text) return;
   input.value = '';
+
+  conversationHistory.push({ role: 'user', content: text });
   addMsg(text, 'user');
   showTyping();
 
   fetch(WEBHOOK_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message: text })
+    body: JSON.stringify({ message: text, history: conversationHistory })
   })
   .then(function(res) { return res.json(); })
   .then(function(data) {
     removeTyping();
-    addMsg(data.reply || data.message || data.output || 'Thanks for your message!', 'bot');
+    var reply = data.reply || data.message || data.output || 'Thanks for your message!';
+    conversationHistory.push({ role: 'assistant', content: reply });
+    addMsg(reply, 'bot');
   })
   .catch(function() {
     removeTyping();
