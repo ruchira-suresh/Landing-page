@@ -1079,7 +1079,7 @@
 </footer>
 
 <!-- CHATBOT -->
-<div class="chat-trigger" id="chatTrigger" role="button" aria-label="Open chat">
+<div class="chat-trigger" id="chatTrigger" role="button" aria-label="Open chat" onclick="document.getElementById('chatWindow').classList.toggle('open')">
   <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
 </div>
 
@@ -1090,14 +1090,14 @@
       <strong>Ask about Ruchira</strong>
       <span>Powered by Claude AI</span>
     </div>
-    <div class="chat-close" id="chatClose">✕</div>
+    <div class="chat-close" id="chatClose" onclick="document.getElementById('chatWindow').classList.remove('open')">✕</div>
   </div>
   <div class="chat-messages" id="chatMessages">
     <div class="msg msg-bot">Hi! I'm here to answer questions about Ruchira. Ask me about her background, work, projects, or anything else you'd like to know.</div>
   </div>
   <div class="chat-input-area">
-    <input class="chat-input" id="chatInput" type="text" placeholder="Ask me anything…" />
-    <div class="chat-send" id="chatSend">
+    <input class="chat-input" id="chatInput" type="text" placeholder="Ask me anything…" onkeydown="if(event.key==='Enter') sendMessage()" />
+    <div class="chat-send" id="chatSend" onclick="sendMessage()">
       <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
     </div>
   </div>
