@@ -43,7 +43,16 @@ function sendMessage() {
   .then(function(res) { return res.json(); })
   .then(function(data) {
     removeTyping();
-    var reply = data.reply || data.message || data.output || 'Thanks for your message!';
+    var reply;
+    if (Array.isArray(data) && data[0] && data[0].content && data[0].content[0]) {
+      reply = data[0].content[0].text;
+    } else if (data.content && data.content[0]) {
+      reply = data.content[0].text;
+    } else if (data.reply) {
+      reply = data.reply;
+    } else {
+      reply = 'Thanks for your message!';
+    }
     conversationHistory.push({ role: 'assistant', content: reply });
     addMsg(reply, 'bot');
   })
