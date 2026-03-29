@@ -680,8 +680,7 @@
     .skills-grid { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
     #note > div { grid-template-columns: 1fr !important; }
-    #note svg { display: none; }
-    #note .mobile-flow { display: flex; }
+    #note .mobile-flow { display: none !important; }
 
     .section-title { font-size: 1.6rem; margin-bottom: 2rem; }
 
@@ -785,7 +784,7 @@
 <!-- PERSONAL NOTE -->
 <section id="note">
   <p class="section-label">A bit more about me</p>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+  <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
     <div>
       <p style="font-family: var(--serif); font-size: clamp(1.1rem, 4vw, 1.6rem); line-height: 1.5; color: var(--text); letter-spacing: -0.01em; margin-bottom: 1.5rem;">
         In research, manual work is just part of the job. It always has been.
