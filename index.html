@@ -388,7 +388,7 @@
 
   /* CONTACT */
   .contact-inner {
-    max-width: 560px;
+    max-width: 720px;
   }
 
   .contact-inner p {
@@ -633,6 +633,8 @@
     .nav-links { display: none; }
     section { padding: 4rem 1.5rem; }
     .hero { padding: 7rem 1.5rem 4rem; }
+    .hero > div { grid-template-columns: 1fr !important; }
+    .hero > div > div:last-child { display: none; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
     .chat-window { width: calc(100vw - 2rem); right: 1rem; }
@@ -656,17 +658,43 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-inner">
-    <span class="hero-tag">Consumer Research × AI Automation</span>
-    <h1>I work in consumer research and I'm building the <em>tools I wish existed.</em></h1>
-    <p class="hero-desc">
-      Researcher and automation builder at the intersection of consumer insight and AI. 
-      By day I uncover what drives shopper behaviour. Outside of that I'm automating the parts that shouldn't be manual.
-    </p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">See what I'm building</a>
-      <a href="Ruchira_Suresh_CV.pdf" download class="btn btn-outline">Download CV</a>
-      <a href="#contact" class="btn btn-outline">Get in touch</a>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%;">
+    <div class="hero-inner">
+      <span class="hero-tag">Consumer Research × AI Automation</span>
+      <h1>I work in consumer research and I'm building the <em>tools I wish existed.</em></h1>
+      <p class="hero-desc">
+        Researcher and automation builder at the intersection of consumer insight and AI. 
+        By day I uncover what drives shopper behaviour. Outside of that I'm automating the parts that shouldn't be manual.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">See what I'm building</a>
+        <a href="Ruchira_Suresh_CV.pdf" download class="btn btn-outline">Download CV</a>
+      </div>
+      <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <a href="https://www.linkedin.com/in/dr-ruchira-suresh-32922115/" target="_blank" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-muted); font-size: 0.875rem; transition: color 0.2s;">
+          <div style="width: 28px; height: 28px; background: var(--accent-light); border-radius: 0.3rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 500; color: var(--accent); flex-shrink: 0;">in</div>
+          linkedin.com/in/dr-ruchira-suresh-32922115
+        </a>
+        <a href="/cdn-cgi/l/email-protection#394b4c5a51504b58174a4c4b5c4a51795e54585055175a5654" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-muted); font-size: 0.875rem; transition: color 0.2s;">
+          <div style="width: 28px; height: 28px; background: var(--accent-light); border-radius: 0.3rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 500; color: var(--accent); flex-shrink: 0;">@</div>
+          <span class="__cf_email__" data-cfemail="6a181f090203180b44191f180f19022a0d070b030644090507">[email&#160;protected]</span>
+        </a>
+        <span style="display: flex; align-items: center; gap: 0.75rem; color: var(--text-muted); font-size: 0.875rem;">
+          <div style="width: 28px; height: 28px; background: var(--accent-light); border-radius: 0.3rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: var(--accent); flex-shrink: 0;">📍</div>
+          Berlin, Germany
+        </span>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <div style="position: relative;">
+        <div style="width: 320px; height: 320px; border-radius: 50%; overflow: hidden; border: 4px solid var(--accent-light);">
+          <img src="photo.jpg" alt="Ruchira Suresh" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="position: absolute; bottom: 16px; right: -10px; background: white; border: 1px solid var(--border); border-radius: 0.75rem; padding: 0.75rem 1rem; font-size: 0.8rem; color: var(--text-muted); box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+          <strong style="display: block; color: var(--text); font-size: 0.875rem;">Dr. Ruchira Suresh</strong>
+          Senior Research Consultant
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -678,10 +706,12 @@
   <p class="section-label">About</p>
   <div class="about-grid">
     <div class="about-text">
+      <div>
       <p>I'm <strong>Dr. Ruchira Suresh</strong>, a Senior Research Consultant at <strong>eye square</strong> in Berlin, with a doctorate in psychology and over three years of industry experience in market research.</p>
       <p>My work centres on <strong>understanding what drives consumer attention, choice, and behaviour</strong>, integrating implicit and explicit methods like eye tracking and surveys to deliver insights that are commercially actionable, not just academically interesting.</p>
-      <p>I specialise in advanced quantitative research, benchmarking, and meta-analytical work, synthesising insights across studies to establish category norms and sharpen recommendations for leading FMCG brands.</p>
+      <p>I specialise in advanced quantitative research, benchmarking, and meta-analytical work, synthesising insights across studies to establish category norms and sharpen recommendations for leading leading brands.</p>
       <p>Alongside the research, I'm building <strong>automated workflows in n8n</strong> to modernise how analysis gets done. Less time on process, more time on insight.</p>
+    </div>
     </div>
     <div class="about-stats">
       <div class="stat-item" style="border-left: 3px solid var(--accent); border-radius: 0 0.5rem 0.5rem 0;">
@@ -705,7 +735,7 @@
 <!-- PERSONAL NOTE -->
 <section id="note">
   <p class="section-label">A bit more about me</p>
-  <div style="max-width: 620px;">
+  <div style="max-width: 720px;">
     <p style="font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.6rem); line-height: 1.5; color: var(--text); letter-spacing: -0.01em; margin-bottom: 1.5rem;">
       Researchers are used to doing a lot by hand. That's just how it's always been done.
     </p>
@@ -741,7 +771,7 @@
       <div>
         <div class="exp-role">Research Consultant</div>
         <div class="exp-company">eye square, Berlin</div>
-        <div class="exp-desc">Managed workstreams in quantitative research projects for FMCG clients, including survey design, data collection, and validation. Conducted in-depth analysis of behavioural data, identifying trends and generating actionable insights. Produced client-facing reports and presentations ensuring clarity and business relevance.</div>
+        <div class="exp-desc">Managed workstreams in quantitative research projects for leading brands, including survey design, data collection, and validation. Conducted in-depth analysis of behavioural data, identifying trends and generating actionable insights. Produced client-facing reports and presentations ensuring clarity and business relevance.</div>
       </div>
     </div>
     <div class="exp-item">
@@ -749,7 +779,7 @@
       <div>
         <div class="exp-role">Associate Consultant</div>
         <div class="exp-company">eye square, Berlin</div>
-        <div class="exp-desc">Supported quantitative research projects for FMCG brands including survey setup, data preparation, and fieldwork coordination. Conducted data cleaning, coding, and analysis for behavioural studies. Contributed to client reports, charts, and baseline insight summaries.</div>
+        <div class="exp-desc">Supported quantitative research projects for leading brands including survey setup, data preparation, and fieldwork coordination. Conducted data cleaning, coding, and analysis for behavioural studies. Contributed to client reports, charts, and baseline insight summaries.</div>
       </div>
     </div>
     <div class="exp-item">
@@ -774,36 +804,35 @@
       <div class="skill-card-icon">🔬</div>
       <h3>Research Methods</h3>
       <div class="skill-tags">
-        <span class="tag">Eye tracking</span>
+        <span class="tag">Eye tracking data analysis</span>
         <span class="tag">Implicit measurement</span>
         <span class="tag">Survey design</span>
-        <span class="tag">Usability testing</span>
         <span class="tag">SPSS</span>
         <span class="tag">Experimental design</span>
+        <span class="tag">Quantitative analysis</span>
       </div>
     </div>
     <div class="skill-card">
       <div class="skill-card-icon">⚡</div>
       <h3>Automation & AI</h3>
       <div class="skill-tags">
+        <span class="tag">Research workflow automation</span>
+        <span class="tag">AI-assisted analysis</span>
+        <span class="tag">API integration</span>
         <span class="tag">n8n</span>
-        <span class="tag">Claude API</span>
-        <span class="tag">OpenAI API</span>
-        <span class="tag">Airtable</span>
-        <span class="tag">Google Drive</span>
-        <span class="tag">Webhook workflows</span>
+        <span class="tag">Prompt engineering</span>
       </div>
     </div>
     <div class="skill-card">
       <div class="skill-card-icon">🛒</div>
-      <h3>Shopper & Retail Research</h3>
+      <h3>Ecommerce & Retail Research</h3>
       <div class="skill-tags">
+        <span class="tag">Simulated retail environments</span>
+        <span class="tag">Ecommerce behaviour research</span>
+        <span class="tag">Shopper decision making</span>
         <span class="tag">Walmart</span>
         <span class="tag">Amazon</span>
         <span class="tag">Tesco</span>
-        <span class="tag">Simulated retail</span>
-        <span class="tag">PDP testing</span>
-        <span class="tag">Carousel studies</span>
       </div>
     </div>
     <div class="skill-card">
@@ -920,7 +949,7 @@
 <section id="contact">
   <p class="section-label">Contact</p>
   <h2 class="section-title">Get in touch</h2>
-  <div class="contact-inner">
+  <div class="contact-inner" style="max-width: 720px;">
     <p>I like talking to people who are curious about the same things. If you work in research, are thinking about automation, or just want to swap notes on what you're building, feel free to reach out.</p>
     <div class="contact-links">
       <a href="https://www.linkedin.com/in/dr-ruchira-suresh-32922115/" target="_blank" class="contact-link">
@@ -970,7 +999,7 @@
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const WEBHOOK_URL = 'YOUR_N8N_WEBHOOK_URL_HERE';
 
   const trigger = document.getElementById('chatTrigger');
@@ -1016,11 +1045,4 @@
     try {
       const res = await fetch(WEBHOOK_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text })
-      });
-      const data = await res.json();
-      removeTyping();
-      addMsg(data.reply || data.message || data.output || 'Thanks for your message!', 'bot');
-    } catch (e) {
-      remove
+        headers: { 'Content-Type': 'applicati
