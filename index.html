@@ -704,7 +704,6 @@
     <li><a href="#education">Education</a></li>
     <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#impressum">Impressum</a></li>
   </ul>
 </nav>
 
@@ -727,9 +726,9 @@
           <div style="width: 28px; height: 28px; background: var(--accent-light); border-radius: 0.3rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 500; color: var(--accent); flex-shrink: 0;">in</div>
           linkedin.com/in/dr-ruchira-suresh-32922115
         </a>
-        <a href="https://mail.google.com/mail/?view=cm&to=ruchira.suresh@gmail.com" target="_blank" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-muted); font-size: 0.875rem; transition: color 0.2s;">
+        <a href="mailto:ruchira.suresh@gmail.com" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-muted); font-size: 0.875rem; transition: color 0.2s;">
           <div style="width: 28px; height: 28px; background: var(--accent-light); border-radius: 0.3rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 500; color: var(--accent); flex-shrink: 0;">@</div>
-          ruchira.suresh [at] gmail.com
+          ruchira.suresh@gmail.com
         </a>
         <span style="display: flex; align-items: center; gap: 0.75rem; color: var(--text-muted); font-size: 0.875rem;">
           <div style="width: 28px; height: 28px; background: var(--accent-light); border-radius: 0.3rem; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: var(--accent); flex-shrink: 0;">📍</div>
@@ -1074,45 +1073,41 @@
           <span>Dr. Ruchira Suresh</span>
         </div>
       </a>
-      <a href="https://mail.google.com/mail/?view=cm&to=ruchira.suresh@gmail.com" target="_blank" class="contact-link">
+      <a href="mailto:ruchira.suresh@gmail.com" class="contact-link">
         <div class="contact-link-icon">@</div>
         <div>
           <strong>Email</strong>
-          <span>ruchira.suresh [at] gmail.com</span>
+          <span>ruchira.suresh@gmail.com</span>
         </div>
       </a>
     </div>
   </div>
 </section>
 
-<hr class="divider">
+<footer>
+  <p>© 2026 Ruchira Suresh · Berlin · <a href="#" onclick="document.getElementById('impressum').style.display='flex'; return false;" style="color: var(--text-muted); text-decoration: none;">Impressum</a></p>
+</footer>
 
 <!-- IMPRESSUM -->
-<section id="impressum">
-  <p class="section-label">Legal</p>
-  <h2 class="section-title">Impressum</h2>
-  <div style="max-width: 560px;">
-    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem;">
-      Angaben gemäß § 5 TMG / Information according to § 5 TMG
-    </p>
-    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.5rem;">
+<div id="impressum" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 300; align-items: center; justify-content: center;" onclick="this.style.display='none'">
+  <div style="background: var(--white); border-radius: 1rem; padding: 2.5rem; max-width: 480px; margin: 1rem;" onclick="event.stopPropagation()">
+    <h3 style="font-family: var(--serif); font-size: 1.4rem; margin-bottom: 1.5rem;">Impressum</h3>
+    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.75rem;">
       <strong style="color: var(--text);">Dr. Ruchira Suresh</strong><br>
       Berlin, Germany
     </p>
-    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.5rem;">
-      <strong style="color: var(--text);">Kontakt / Contact</strong><br>
-      E-Mail: ruchira.suresh [at] gmail.com
+    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.75rem;">
+      <strong style="color: var(--text);">Kontakt</strong><br>
+      ruchira.suresh@gmail.com
     </p>
-    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-top: 1rem;">
-      Diese Website ist eine private Internetpräsenz und dient ausschließlich der persönlichen Vorstellung.<br>
-      This website is a private site for personal presentation purposes only.
+    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+      Angaben gemäß § 5 TMG. Private Internetpräsenz.
     </p>
+    <div style="margin-top: 1.5rem; text-align: right;">
+      <span onclick="document.getElementById('impressum').style.display='none'" style="font-size: 0.875rem; color: var(--accent); cursor: pointer;">Close</span>
+    </div>
   </div>
-</section>
-
-<footer>
-  <p>© 2026 Ruchira Suresh · Berlin</p>
-</footer>
+</div>
 
 <!-- CHATBOT -->
 <div class="chat-trigger" id="chatTrigger" role="button" aria-label="Open chat" onclick="document.getElementById('chatWindow').classList.toggle('open')">
